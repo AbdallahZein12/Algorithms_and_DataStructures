@@ -1,0 +1,22 @@
+* Bloom filters: "Lightweight" version of a hash table. Efficient insertions and lookups.
+
+* More space efficient than hash table, but this comes at the cost of having "False Positives" (May tell you that an item is in the list when it isnt) for entry lookups
+
+* You will never get a false negative 
+
+* Probabilstic data structure. 
+
+
+
+When should I use a bloom filter?
+
+- I want a data structure that allows for fast lookups and insertions. I care about how much 
+space the data structure uses. I don't care if the data structure sometimes indicates an item is present when in fact 
+it is not. 
+
+Example: 
+
+- I run a website and want to keep track of IP addresses that are blocked. I don't practicularly care
+if a blocked IP address is occasionally able to access my website, but I do care if someone not on the blocked list 
+is unable to access the site. 
+
