@@ -1,0 +1,45 @@
+Linked Lists (Signly Linked List)
+
+* Most common type of linked Lists
+
+        ---
+        |      Head
+        |       |
+Node == | [A    |    ]  ------> [B|] -------> [C|] ------> [D|] --------> Null
+        |  |       |
+        |  |       |
+        | Data    Next
+        ---
+
+* Linked lists are consisted of Nodes. Each box is a Node
+* Each node has two sections, data and next
+* Data allows each node to store some element of data - Could be strings characters, nums, and objects
+* Next is a pointer that points from one node to another. 
+* Start of the list is called a head 
+* As we traverse a list the head will traverse with us to figure out where we are in the list 
+* End of any linked list is the notion of Null. in python the last pointer of the last node points to None 
+
+
+Array vs. Linked List
+
+                          Array       Linked List
+Insertion/Deletion   |    O(n)     |     O(1)
+Access Element       |    O(1)     |     O(n)
+Contiguous Memory?   |    Yes      |     No     
+
+
+( NOTE: Contiguous memory refers to a memory layout in which multiple memory elements are stored in a consecutive sequence of memory addresses. In other words, the elements are stored one after another in memory without any gaps.
+
+Arrays are implemented using contiguous memory because it provides several advantages:
+
+Efficient element access: Since the elements in an array are stored contiguously, accessing any element can be done efficiently by calculating its memory address using simple arithmetic. The processor can easily calculate the address of the desired element based on the index and the size of each element. This allows for constant-time random access to array elements.
+
+Cache performance: Modern computer architectures utilize caching mechanisms to speed up memory access. Contiguous memory layouts align well with the caching mechanisms since accessing one element of an array often results in fetching a block of memory into the cache, which can be utilized by subsequent element accesses. This spatial locality improves cache performance compared to non-contiguous data structures.
+
+On the other hand, linked lists do not use contiguous memory. In a linked list, each element (node) contains a value and a reference (pointer) to the next node in the list. The nodes can be scattered in different memory locations, and the references are used to link them together. This lack of contiguity in memory brings the following consequences:
+
+Indirect element access: To access a specific element in a linked list, you need to traverse the list from the beginning until you reach the desired position. Unlike arrays, which provide direct access using the index, linked lists require traversing the nodes one by one until the desired node is reached. This results in a linear time complexity for accessing elements.
+
+Poor cache performance: Linked lists do not exhibit good cache performance due to their non-contiguous memory layout. Traversing a linked list often involves jumping to different memory locations, which can cause frequent cache misses. This can result in slower performance compared to arrays when dealing with large amounts of data.
+
+In summary, arrays are implemented using contiguous memory to provide efficient random access and leverage cache performance benefits, while linked lists use non-contiguous memory with pointers to allow for flexible insertion and deletion of elements but at the cost of slower access times.)
