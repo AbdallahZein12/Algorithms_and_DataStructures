@@ -43,3 +43,5 @@ Indirect element access: To access a specific element in a linked list, you need
 Poor cache performance: Linked lists do not exhibit good cache performance due to their non-contiguous memory layout. Traversing a linked list often involves jumping to different memory locations, which can cause frequent cache misses. This can result in slower performance compared to arrays when dealing with large amounts of data.
 
 In summary, arrays are implemented using contiguous memory to provide efficient random access and leverage cache performance benefits, while linked lists use non-contiguous memory with pointers to allow for flexible insertion and deletion of elements but at the cost of slower access times.)
+
+
