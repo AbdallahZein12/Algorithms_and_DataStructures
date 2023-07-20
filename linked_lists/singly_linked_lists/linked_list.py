@@ -38,11 +38,54 @@ class LinkedList:
         new_node.next = prev_node.next
         prev_node.next = new_node
         
+    def delete_node(self, key):
+        curr_node = self.head
+        if curr_node and curr_node.data == key:
+            self.head = curr_node.next
+            curr_node = None
+            return
+        prev = None
+        while curr_node and curr_node.data != key:
+            prev = curr_node
+            curr_node = curr_node.next
+            
+        if curr_node is None:
+            return
+        
+        prev.next = curr_node.next
+        curr_node = None
+    
+    def delete_node_at_pos(self,pos):
+        curr_node = self.head
+        
+        if pos == 0:
+            self.head = curr_node.next
+            curr_node = None
+            return
+        
+        prev = None
+        count = 0
+        while curr_node and count != pos:
+            prev = curr_node
+            curr_node = curr_node.next
+            count += 1
+        
+        if curr_node is None:
+            return
+        
+        prev.next = curr_node.next
+        curr_node = None
+        
+        
+        
+        
 llist = LinkedList()
 llist.append("A")
 llist.append("B")
 llist.append("C")
 llist.append("D")
 llist.prepend("E")
-llist.insert_after_node(llist.head.next, "F")
+llist.insert_after_node(llist.head.next.next, "F")
+llist.delete_node("B")
+llist.delete_node_at_pos(1)
 llist.print_list()
