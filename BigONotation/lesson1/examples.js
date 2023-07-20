@@ -13,3 +13,4 @@ function constants(arr) {
     var result = 100 * 1000
     return result
 }
+
